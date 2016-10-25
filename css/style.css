@@ -1,0 +1,309 @@
+﻿body {
+margin:0 auto;
+padding:0;
+}
+
+
+#container { 
+ width:100%;
+ min-width: 990px;
+}
+#container .content{ 
+ width:990px;
+height:100%;
+ margin:0 auto;
+ position:relative;
+}
+
+
+#container .caption_1 { 
+height:955px;
+ background:url(../images/wri_v4_01.jpg) no-repeat center top;
+}
+#container .caption_1 .nav1 { 
+    display:block;
+    width:182px;
+    height:36px;
+    position:absolute;
+    left:215px;
+    top:235px;
+}
+#container .caption_1 .nav2 { 
+    display:block;
+    width:182px;
+    height:36px;
+    position:absolute;
+    left:597px;
+    top:235px;
+}
+#container .caption_1 .subNav1 { 
+    display:none;
+    width:770px;
+    height:230px;
+    position:absolute;
+    left:2px;
+    top:36px;
+    background:url(../images/nav1.png) no-repeat center top;
+}
+#container .caption_1 .subNav2 { 
+    display:none;
+    width:170px;
+    height:242px;
+    position:absolute;
+    left:5px;
+    top:36px;
+    background:url(../images/nav2.png) no-repeat center top;
+}
+#container .caption_1_1 { 
+height:168px;
+background:url(../images/wri_v4_02.jpg) no-repeat center top;
+}
+
+
+#container .caption_2 { 
+height:958px;
+position:relative;
+ background:url(../images/wrigley_pc_v2_02.jpg) no-repeat center top;
+}
+	#container .caption_2 .page_1 { 
+		width:536px;
+		height:421px;
+		position:absolute;
+		left:435px;
+		top:261px;
+		background:url(../images/wrigley_pc_p1.png) no-repeat center top;
+		display:block;
+		}
+	#container .caption_2 .page_2 { 
+		width:574px;
+		height:424px;
+		position:absolute;
+		left:418px;
+		top:279px;
+		background:url(../images/1.gif) no-repeat center top;
+		display:none;
+		}
+	#container .caption_2 .page_2 img { 
+			width:350px;
+			height:200px;	
+	}
+	#container .caption_2 .page_3 { 
+		width:988px;
+		height:532px;
+		position:absolute;
+		left:23px;
+		top:424px;
+		background:url(../images/wrigley_pc_p1v1.png) no-repeat center top;
+		display:block;
+		}
+
+#container .caption_3 { 
+height:641px;
+position:relative;
+ background:url(../images/wrigley_pc_v2_03.jpg) no-repeat center top;
+}
+	#container .caption_3 .page_1 { 
+		width:482px;
+		height:266px;
+		position:absolute;
+		left:436px;
+		top:103px;
+		background:url(../images/wrigley_pc_p2.png) no-repeat center top;
+		display:block;
+		}
+	#container .caption_3 .page_2 { 
+		width:563px;
+		height:333px;
+		position:absolute;
+		left:391px;
+		top:67px;
+		background:url(../images/2.gif) no-repeat center top;
+		display:none;
+		}
+
+#container .caption_4 { 
+height:756px;
+position:relative;
+background:url(../images/wrigley_pc_v2_04.jpg) no-repeat center top;
+}
+	#container .caption_4 .page_1 { 
+		width:472px;
+		height:366px;
+		position:absolute;
+		left:291px;
+		top:272px;
+		background:url(../images/wrigley_pc_p3.png) no-repeat center top;
+		display:block;
+		}
+	#container .caption_4 .page_2 { 
+		width:493px;
+		height:417px;
+		position:absolute;
+		left:291px;
+		top:252px;
+		background:url(../images/3.gif) no-repeat center top;
+		display:none;
+		}
+
+#container .caption_5{ 
+height:769px;
+position:relative;
+ background:url(../images/wrigley_pc_v2_05.jpg) no-repeat center top;
+}
+	#container .caption_5 .page_1 { 
+		width:265px;
+		height:313px;
+		position:absolute;
+		left:152px;
+		top:72px;
+		background:url(../images/wrigley_pc_p4.png) no-repeat center top;
+		display:block;
+		}
+	#container .caption_5 .page_2 { 
+		width:385px;
+		height:423px;
+		position:absolute;
+		left:89px;
+		top:18px;
+		background:url(../images/4.gif) no-repeat center top;
+		display:none;
+		}
+#container .caption_5 .page_3 { 
+		width:434px;
+		height:389px;
+		position:absolute;
+		left:27px;
+		top:62px;
+		background:url(../images/wrigley_pc_p5.png) no-repeat center top;
+		display:block;
+		}
+
+
+#container .caption_6 { 
+height:836px;
+ background:url(../images/wri_v3_01.jpg) no-repeat center top;
+}
+#container .caption_7 { 
+height:762px;
+ background:url(../images/wri_v3_02.jpg) no-repeat center top;
+}
+#container .caption_8 { 
+height:830px;
+ background:url(../images/wri_v3_03.jpg) no-repeat center top;
+}
+#container .caption_9 { 
+height:438px;
+ background:url(../images/wri_v3_04.jpg) no-repeat center top;
+}
+#container .caption_10 { 
+height:1097px;
+ background:url(../images/wri_v3_05.jpg) no-repeat center top;
+}
+#container .caption_11 { 
+height:1235px;
+ background:url(../images/wri_v3_06.jpg) no-repeat center top;
+}
+#container .caption_12 { 
+height:1268px;
+ background:url(../images/wri_v3_07.jpg) no-repeat center top;
+}
+#container .caption_13 { 
+height:1287px;
+ background:url(../images/wri_v3_08.jpg) no-repeat center top;
+}
+#container .caption_14 { 
+position:relative;
+height:373px;
+ background:url(../images/wri_v3_09.jpg) no-repeat center top;
+}
+#container .caption_15 { 
+height:254px;
+ background:url(../images/wri_v3_10.jpg) no-repeat center top;
+}
+.nav { 
+position:fixed;
+top:20%;
+right:0;
+float:right;
+width:159px;
+height:524px;
+}
+
+
+
+    .rollBox { 
+        width: 558px; 
+        height: 260px; 
+        overflow: hidden; 
+        margin: 0 auto ; 
+        padding-top:261px;
+    }
+    .rollBox .LeftBotton { 
+        height: 35px; 
+        width: 24px; 
+        background: url(../images/sl.png) no-repeat 0px 0px; 
+        overflow: hidden; 
+        float: left; 
+        display: inline; 
+        margin: 33px 0 0 0;
+        cursor: pointer; 
+    }
+    .rollBox .RightBotton { 
+        height: 35px; 
+        width: 24px;  
+        background: url(../images/sr.png) no-repeat 0px 0px; 
+        overflow: hidden; 
+        float: left; 
+        display: inline; 
+        margin: 33px 0 0 0; 
+        cursor: pointer; }
+
+
+    .rollBox .Cont { width: 500px; overflow: hidden; float: left; 
+
+    }
+    .rollBox .ScrCont { width: 10000000px; }
+    .rollBox .Cont .pic { width: 170px; float: left; text-align: center; }
+    .rollBox .Cont .pic img { padding: 9px; display: block; margin: 0 auto; width: 140px; height: 100px; }
+    .rollBox .Cont .pic div { line-height: 20px; color: #505050; margin: 15px 0px; }
+    .rollBox .Cont .pic div span { display: block; }
+    .rollBox .Cont a:link, .rollBox .Cont a:visited { color: #626466; text-decoration: none; }
+    .rollBox .Cont a:hover { color: #f00; text-decoration: underline; }
+    .rollBox #List1, .rollBox #List2 { float: left; }
+
+.foot_kv_01 { 
+    display:block;
+    width:632px;
+    height:160px;
+    position:absolute;
+    left:179px;
+    top:58px;
+    background:url(../images/foot_kv_01.png) no-repeat center top;
+}
+.foot_kv_02 { 
+    display:none;
+    width:632px;
+    height:160px;
+    position:absolute;
+    left:179px;
+    top:58px;
+    background:url(../images/foot_kv_02.png) no-repeat center top;
+}
+.foot_kv_03 { 
+    display:none;
+    width:632px;
+    height:160px;
+    position:absolute;
+    left:179px;
+    top:58px;
+    background:url(../images/foot_kv_03.png) no-repeat center top;
+}
+.foot_kv_04 { 
+    display:none;
+    width:632px;
+    height:160px;
+    position:absolute;
+    left:170px;
+    top:58px;
+    background:url(../images/foot_kv_04.png) no-repeat center top;
+}
