@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>H5单页面手势滑屏切换</title>
+    <meta name="viewport" charset="utf-8" content="width=device-width,
+    initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=1.0">    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cityselect.js"></script>
+    <script type="text/javascript" src="js/result.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <style type="text/css">
+         @media screen and (max-width: 380px){
+            .warning{
+                line-height: 15px;
+            }
+            h1{
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (min-width: 380px) and (max-width: 500px){
+            .warning{
+                line-height: 40px;
+                margin-top: 15px
+            }
+            h1{
+                margin-top: 25px
+            }
+        }
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+  <div id="viewport" class="viewport">
+    <div id="indexPage" class="pageview" style="overflow: hidden;">
+      <span class="sideBar">
+        <a href="https://taotonggroup.com/weiform/weitrade/regular_page">查看<br>规则</a>
+      </span>
+      <div id="clickButton">
+        <a href="#" class="button button-caution button-jumbo" style="opacity: 0.2;">Go</a>
+      </div>
+    </div>
+    <div id="infoPage" class="pageview" style="overflow-y: scroll;background-color: #f3a8bf">
+        <h1 class="page2head">找茬有奖</h1>
+        <div style="overflow-y: scroll;">
+          <img src="images/findDifOri.jpg" alt="findDifOri">
+          <img src="images/findDifChange.jpg" alt="findDifChange">
+        </div>
+        <form id="dealerSelect" action="" style="overflow-y: scroll;">
+          <textarea name="answer" id="answer" cols="30" rows="10" placeholder="【答案】请写出1、2、3、4区域的不同"></textarea>
+          <input type="text" name="customName" id="customName" placeholder="【答案】请写出1、2、3、4区域的不同">
+          <input type="text" name="phoneNum" id="phoneNum" placeholder="【答案】请写出1、2、3、4区域的不同">
+          <p for="selectLocation" style="margin-left: 7%">收货地址</p>
+          <div class="selectLocation">            
+            <select name="province" id="province"></select>
+            <select name="city" id="city"></select>
+            <select name="county" id="county"></select>
+          </div>
+          <textarea name="answer" id="detailAddress" cols="30" rows="10" placeholder="详细地址（如街道、门牌号等）" style="margin-bottom: 50px"></textarea>
+        </form>
+        
+        <!-- <form class="info_page" id="dealerSelect" >
+            <img src="https://www.taotonggroup.com/images/big/images/素材5.fw.png" style="position: absolute;top: 8px;left: 14px;z-index: -1" width="75" height="75">
+            <h1>吹出大大回忆</h1>            
+            <div class="warning">温馨提示：<br>
+            请前往“吃货趴趴趴俱乐部”微信公众号，找出下面问题正确答案，前六百名答对者免费获赠大大泡泡糖礼包啦~
+            <img src="https://www.taotonggroup.com/images/big/images/素材7.fw.png" style="position: absolute;top: 45px;right: 10px;" width="70" height="25">
+            <p style="position: absolute;top: 45px;right: 12px;color: #6710b0" width="50" height="25">获取答案</p>
+            </div>
+            <p style="font-size: 26px;position: relative;font-family:STKaiti;font-weight: bolder;letter-spacing:-3px;margin-top: 20px">已参与人数：<span class="people_qty" id="qty" style="letter-spacing:0px">200</span></p>
+            <p>问题一: 大大泡泡糖是什么时候开始在中国售卖的?</p>
+            <textarea placeholder="请在这里写下你的答案.." name="answer_1"></textarea>
+            <p>问题二: 大大泡泡糖网上卖多少钱?</p>
+            <textarea placeholder="请在这里写下你的答案.." name="answer_2"></textarea>
+            <br>
+            <input type="text" placeholder="请输入你的名字" name="name"></input>
+            <br>
+            <input type="text" placeholder="请输入你的电话号码" name="telnum"></input>
+            <p style="font-size: 15px;font-weight: bold;margin-left: 10px">收货地址：</p>
+            <div class="select_location">
+                <select name="province"></select>
+                <select name="city"></select>
+                <select name="county"></select>
+            </div>
+            <input type="text" placeholder="详细地址（如街道、门牌号等）" name="adderss" style="height: 20px;"></input>
+            <p style="font-size: 15px">注：关注公众号可留言查询快递单号</p>
+            <input type="submit" value="点击提交" id="dealerSumbit" style="background:url(https://www.taotonggroup.com/images/big/images/素材10.fw.png) no-repeat ;border:none;width: 100px;background-size:100px 30px;color: #6710b0;font-weight: bold;font-family: LiSu;font-size: 18px;margin-bottom: 20px"></input>
+            <img src="https://www.taotonggroup.com/images/big/images/素材6.fw.png" style="position: absolute;bottom: 0px;right: 0px;z-index: -1" width="45" height="45">
+        </form> -->
+    </div>
+    <div class="pageview" style="background: #00BCD4;overflow-y:scroll">
+        <img src="https://www.taotonggroup.com/images/big/images/素材11.fw.png" alt="标题图" style="" width="100%" height="100">
+            <p style="font-size: 31px;position: absolute;top: 26px;left: 7px;color: #fff;letter-spacing:-3px;text-shadow:-4px -3px 1px #8a3087;font-weight: bold">参与答题送礼品啦</p>
+            <div class="regular"><p style="font-weight: bold;font-size: 18px;background:url(https://www.taotonggroup.com/images/big/images/素材10.fw.png) no-repeat ;background-size:116px 40px;line-height: 40px;text-align: left;margin-bottom: 0">&nbsp;活动规则：</p>
+            <ul style="margin: 0px 15px 0px 15px;letter-spacing:-1px;">
+                <li style="margin-bottom: 15px">1）关注微信公众号：吃货趴趴趴俱乐部；</li>
+                <li style="margin-bottom: 15px">2）点击菜单栏“活动专区”-《找到问题答案》，轻松找到两个问题答案后，点击文章下方“原文链接”进入活动页面答题并提交相关信息。</li>
+                <li style="margin-bottom: 15px">3）分享此活动并截图到公众号后台。</li>
+            </ul>
+            <p style="font-weight: bold;font-size: 18px;background:url(https://www.taotonggroup.com/images/big/images/素材10.fw.png) no-repeat ;background-size:116px 40px;line-height: 40px;text-align: left;margin-bottom: 0">&nbsp;活动须知：</p>
+            <ul style="margin: 0 15px 25px 15px;letter-spacing:-1px;">
+                <li>1）活动期间，每个手机号只限参与一次（<span style="color: red">重复无效</span>），先参与先得。</li>
+                <li>2）此次活动奖品将免费赠送给前1008名<span style="color: red">答对题目的用户</span>，答错者名额顺延。</li>
+                <li>3）由于奖品数量较多，<span style="color: red">发货后不接受改地址</span>，请务必提交前核对好资料。</li>
+                <li>4）提交资料后，请发送参与活动的手机号码到【吃货趴趴趴俱乐】公众号上，以便核对资料。</li>
+                <li>5）<span style="color: red">收货地址提交不齐全、提交资料后取消关注、没有截图并发送手机号码的用户</span>均视为放弃此次活动参与。</li>
+                <li>6）此次活动奖品将统一于活动结束后一周内寄出，产品均统一口味，无法更换。</li>
+                <li>7）快递不送达的偏远地区将不参与此活动。</li>
+            </ul>
+            </div>
+            <img src="https://www.taotonggroup.com/images/big/images/素材8.fw.png" style="position: absolute;bottom: 0px;left: 15px;z-index: -1" width="35" height="45">
+            <p style="font-weight: bold;font-size: 18px;background:url(https://www.taotonggroup.com/images/big/images/素材10.fw.png) no-repeat ;background-size:116px 30px;width:116px;line-height: 30px;text-align: left;margin-bottom: 15px;margin-right: auto;margin-left: auto;color: #6710b0;font-weight: bold;">&nbsp;&nbsp;<a href="https://bak.taotonggroup.com/weiform/weitrade/index_page" target="_self">返回</a></p>
+    </div>
+    <div class="pageview" style="background: #e0a718;">
+        <img src="http://www.taotonggroup.com/images/big/images/素材2.fw.png" alt="标题图" style="position: absolute;top: 0px;z-index: -1" width="100%">
+            <p style="margin-top: 200px;text-align: center;margin-bottom: 20px;font-weight: bold;font-size: 20px">感谢您的参与！</p>
+            <p style="text-align: center;margin-bottom: 100px">获赠礼品将于活动结束后一周发出</p>
+            <div style="position: relative;font-size: 36px;background:url(http://www.taotonggroup.com/images/big/images/素材3.fw.png) no-repeat ;background-size:174px 100px;background-position:center;width:100%;height: 100px;width:100%;text-align: center;margin-bottom: 15px;margin-right: auto;margin-left: auto;">
+              <div class="share" style="position: absolute;bottom: 10px;margin-left: -15px;width: 100%;text-align: center;">
+                <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&scene=110&__biz=MzI5NjQwNDA1MQ==#wechat_redirect" style="background-color: rgba(0,0,0,0);color: #000">转发分享</a>
+              </div>
+            </div>
+    </div>
+    <div class="pageview" style="background: #c03eac;">
+        <h3>页面-5</h3>
+    </div>
+  </div>
+  <div id="button" class="button button-primary button-pill button-small">下一页</div>
+</body>
+    <script type="text/javascript">
+          $(document).ready(function () {
+              ewenx.CitySelect().init("#dealerSelect");
+              $("#dealerSelect").validate({
+              rules:{
+                  answer:{
+                      required:true,
+                      minlength:1
+                  },
+                  customName:"required",
+                  phoneNum:{
+                      number:true,
+                      required:true,
+                      minlength:11
+                  },
+                  detailAddress:"required"
+              },
+              messages:{
+                  answer:{
+                      required:"请输入一个答案",
+                      minlength:"不能为空"
+                  },
+                  customName:"请输入您的名字",
+                  phoneNum:{
+                      number:"请输入数字",
+                      required:"请输入电话号码",
+                      minlength:"请输入11位电话号码",
+                  },
+                  detailAddress:"请输入详细地址"
+              }
+          });
+          })
+    </script>
+</html>
